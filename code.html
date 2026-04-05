@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tectonic Engineering | Coming Soon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d9dadd",
+                    "background": "#f5f7f8",
+                    "on-background": "#0f1923",
+                    "inverse-primary": "#a7c8ff",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#003366",
+                    "secondary": "#003366",
+                    "outline": "#737780",
+                    "surface-container-low": "#f3f3f7",
+                    "on-surface-variant": "#43474f",
+                    "tertiary-container": "#263900",
+                    "on-secondary-fixed": "#002020",
+                    "surface-variant": "#e2e2e6",
+                    "on-tertiary-container": "#7aaa06",
+                    "surface": "#f5f7f8",
+                    "secondary-container": "#d1e4ff",
+                    "on-primary-fixed": "#001b3c",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f0f0f4",
+                    "tertiary-fixed": "#bef458",
+                    "surface-container": "#edeef1",
+                    "surface-container-highest": "#e2e2e6",
+                    "on-secondary-fixed-variant": "#004f4f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2e3133",
+                    "outline-variant": "#c3c6d1",
+                    "tertiary": "#003366",
+                    "primary-fixed": "#d5e3ff",
+                    "on-tertiary-fixed": "#131f00",
+                    "primary": "#003366",
+                    "tertiary-fixed-dim": "#82b904",
+                    "surface-container-high": "#e7e8eb",
+                    "on-tertiary-fixed-variant": "#364e00",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#003366",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "secondary-fixed": "#a8efee",
+                    "secondary-fixed-dim": "#8cd3d2",
+                    "on-primary-container": "#ffffff",
+                    "on-surface": "#0f1923",
+                    "primary-container": "#003366",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f5f7f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+        .bg-glass {
+            background: rgba(249, 249, 253, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<div class="text-xl font-extrabold tracking-tighter text-blue-950 dark:text-white uppercase font-headline" style="">tANKS SOLUTIONS</div>
+<div class="flex items-center gap-4">
+<span class="hidden sm:inline text-blue-900 dark:text-blue-200 font-headline font-bold tracking-tight text-sm" style="">(+34) 91 368 68 42</span>
+<button class="bg-primary text-on-primary px-6 py-2.5 font-headline font-bold tracking-tight text-sm hover:scale-95 duration-150 ease-in-out" style="">
+                    Get in Touch
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-24 min-h-screen flex flex-col justify-center">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 w-full py-12 md:py-24">
+<div class="editorial-grid">
+<!-- Left Content Column -->
+<div class="col-span-12 lg:col-span-7 flex flex-col justify-center space-y-8">
+<div class="space-y-2">
+<span class="text-on-tertiary-container bg-tertiary-fixed/30 px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase font-label rounded-sm" style="">
+                            Status: Infrastructure Update
+                        </span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-primary tracking-tighter leading-[0.95]" style="">Specialized Solutions for Liquid Gast Storage</h1>
+</div>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed" style="">Our digital foundation is undergoing a strategic revamp. We are engineering a new online experience to match the precision of our global gas infrastructure projects.</p>
+<!-- Email Signup -->
+<div class="max-w-md space-y-4">
+<p class="text-xs font-bold font-label uppercase tracking-widest text-outline" style="">Launch Notification</p>
+<form class="flex flex-col sm:flex-row gap-2">
+<input class="flex-grow bg-surface-container-highest border-none focus:ring-2 focus:ring-primary/20 p-4 text-sm font-medium transition-all outline-none" placeholder="Professional Email Address" type="email"/>
+<button class="bg-tertiary text-tertiary-fixed px-8 py-4 font-headline font-bold uppercase tracking-tight text-sm hover:bg-primary transition-colors" style="" type="submit">
+                                Subscribe
+                            </button>
+</form>
+</div>
+<!-- Progress Rail -->
+<div class="space-y-4 pt-8">
+<div class="flex justify-between items-end">
+<span class="text-[10px] font-bold font-label uppercase tracking-tighter text-primary" style="">Reconstruction Progress</span>
+<span class="text-2xl font-headline font-black text-tertiary-fixed-dim italic" style="">85%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest relative">
+<div class="absolute top-0 left-0 h-full bg-tertiary-fixed-dim" style="width: 85%"></div>
+</div>
+<div class="flex justify-between text-[10px] font-medium font-label text-outline uppercase tracking-widest">
+<span class="" style="">Analysis</span>
+<span class="" style="">Design</span>
+<span class="text-primary font-bold" style="">Execution</span>
+</div>
+</div>
+</div>
+<!-- Right Visual Column (Asymmetric Layout) -->
+<div class="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="relative z-10 aspect-[4/5] overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Professional architectural photograph of a massive spherical LNG storage tank at blue hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_ymEPpLtBVhzbgdcR7kho7hnfrOmU-FvLQUWMTiS33svCO4ljL8p1E0iqT2QsLS8ob6B5z0De5urEVJ9f5EVSw4Em496i5dFdjzfp7M6QP7HpqAFyErSkRb0upG4eMfNg_pv00tMeTLMu-peEgr8QEW0XqfaMdOx5GCPP3cjqI6Y-4nE-g-_jF3Vh55sJIJYK-JikCo1a0o9zbAiq5QEn0ZbcWpJ2jt-JBwt3W4JKerUY6c9LtG7LJ7766GxAKP3rdhJGmrEfIXU" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<!-- Decorative Floating Element -->
+<div class="absolute -bottom-8 -left-8 md:-left-16 z-20 bg-secondary-container/90 backdrop-blur-md p-8 max-w-xs hidden sm:block">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl mb-4" data-icon="architecture" style="">architecture</span>
+<h3 class="text-primary font-headline font-bold text-xl mb-2 leading-tight" style="">Structural Integrity First.</h3>
+<p class="text-on-secondary-container text-sm leading-snug" style="">Engineering sustainable solutions for a rapidly evolving global landscape.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Social Proof) -->
+<section class="bg-surface-container-low py-16">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-1">
+<span class="text-[10px] font-bold font-label uppercase tracking-widest text-outline" style="">Located at </span>
+<p class="text-4xl font-headline font-extrabold text-primary tracking-tighter" style=""></p><p class="">C\ Volta 3</p>
+<p class="">28906 Getafe,Spain</p><p></p>
+<p class="text-sm font-medium text-on-surface-variant" style=""><br/></p>
+</div>
+<div class="space-y-1">
+<span class="text-[10px] font-bold font-label uppercase tracking-widest text-outline" style="">DESIGN CODES</span>
+<p class="text-4xl font-headline font-extrabold text-primary tracking-tighter" style=""></p><li class="" style="">API 650/EN14015</li><li class="" style="">API 620/EN14620</li><li class="" style="">ASME VIII Div.1</li><li class="" style="">Eurocode EN13445</li><li class="" style="">PD 5500 (British standard)</li><li class="" style="">AD-Merkblätter (German Code)</li><p class="" style=""></p>
+<p class="text-sm font-medium text-on-surface-variant" style="">Industry Excellence</p>
+</div>
+<div class="space-y-1">
+<span class="text-[10px] font-bold font-label uppercase tracking-widest text-outline" style="">Compliance</span>
+<p class="text-4xl font-headline font-extrabold text-primary tracking-tighter" style="">Leading experts in API-650 &amp; API-620 Tank Construction</p>
+<p class="text-sm font-medium text-on-surface-variant" style="">Certified Standards</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div class="font-['Manrope'] font-black text-blue-900 dark:text-blue-100 text-2xl uppercase tracking-tighter" style="">TANKS SOLUTIONS</div>
+<p class="font-['Inter'] text-sm tracking-wide text-slate-500 max-w-sm" style="">
+                    © 2026 TANK-SOLUTIONS.ES. All blueprints and project data are proprietary and confidential.
+                </p>
+</div>
+<div class="flex flex-col md:items-end justify-between space-y-8 md:space-y-0">
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="font-['Inter'] text-sm tracking-wide text-slate-500 hover:text-blue-900 hover:underline decoration-lime-400 decoration-2 underline-offset-4 transition-opacity" href="#" style="">Sustainability Report</a>
+<a class="font-['Inter'] text-sm tracking-wide text-slate-500 hover:text-blue-900 hover:underline decoration-lime-400 decoration-2 underline-offset-4 transition-opacity" href="#" style="">Global Offices</a>
+<a class="font-['Inter'] text-sm tracking-wide text-slate-500 hover:text-blue-900 hover:underline decoration-lime-400 decoration-2 underline-offset-4 transition-opacity" href="#" style="">Privacy Policy</a>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-fixed-dim transition-colors" data-icon="language" style="">language</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-fixed-dim transition-colors" data-icon="share" style="">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-tertiary-fixed-dim transition-colors" data-icon="mail" style="">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
