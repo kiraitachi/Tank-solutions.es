@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tanks Solutions | Gas storage tank engineering</title>
 <meta name="description" content="Design and construction of low-pressure and atmospheric gas storage tanks according to API 620, API 650, EN 14620 and EN 14015.">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -85,6 +86,38 @@ h2{font-size:clamp(28px,3.6vw,42px);line-height:1.15;font-weight:600;letter-spac
 footer{background:#003a4d;color:#a9d8e8;padding:48px 0 28px;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 footer strong{color:#fff;font-family:'Open Sans',sans-serif;letter-spacing:.06em}
+
+/* hero blueprint animation */
+.bp .d{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s ease-out forwards;animation-delay:var(--d,0s)}
+.bp .f{opacity:0;animation:fadein .8s ease forwards;animation-delay:var(--d,0s)}
+.bp .flow{stroke-dasharray:3 9;animation:fadein .6s ease forwards,flow 1.1s linear infinite;animation-delay:var(--d,0s),var(--d,0s)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadein{to{opacity:1}}
+@keyframes flow{to{stroke-dashoffset:-24}}
+/* scroll reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease var(--rd,0s),transform .7s ease var(--rd,0s),background .2s}
+.js .rv.in{opacity:1;transform:none}
+/* interactive anatomy */
+.lead{color:var(--muted);max-width:620px}
+.anat{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;margin-top:40px}
+#anat-svg{width:100%;height:auto;background:#fff;border-top:3px solid var(--green)}
+.part{cursor:pointer;outline:none}
+.part .sh{fill:rgba(0,96,127,.05);stroke:var(--navy);stroke-width:2;transition:fill .25s,stroke-width .25s}
+.part .hat{fill:url(#hatch)}
+.part.on .sh{fill:rgba(70,168,198,.38);stroke-width:3.2}
+.part:focus-visible .sh{stroke:var(--green)}
+.anat-list button{display:block;width:100%;text-align:left;background:#fff;border:0;border-left:4px solid var(--line);padding:12px 18px;margin-bottom:8px;font:600 15px 'Open Sans',sans-serif;color:var(--navy);cursor:pointer;transition:border-color .2s,transform .2s}
+.anat-list button:hover{transform:translateX(4px)}
+.anat-list button.on{border-left-color:var(--green);box-shadow:0 4px 14px rgba(0,58,77,.10)}
+.anat-info{background:var(--navy);color:#fff;padding:24px 26px;margin-top:16px;min-height:150px}
+.anat-info h3{font-size:20px;margin-bottom:8px}
+.anat-info p{font-size:15px;line-height:1.6}
+@media(max-width:900px){.anat{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  .bp .d{animation:none;stroke-dashoffset:0}.bp .f{animation:none;opacity:1}.bp .flow{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .part .sh,.anat-list button{transition:none}
+}
 </style>
 </head>
 <body>
@@ -124,16 +157,29 @@ footer strong{color:#fff;font-family:'Open Sans',sans-serif;letter-spacing:.06em
       <p>From design to construction, we deliver low-pressure and atmospheric storage tanks built to the most demanding international codes.</p>
       <a class="btn" href="#contact">Get in touch</a><a class="btn ghost" href="#what">Our solutions</a>
     </div>
-    <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g fill="none" stroke="#a9d8e8" stroke-width="2.5">
-        <path d="M110 120 Q110 40 200 24 Q290 40 290 120"/>
-        <rect x="110" y="120" width="180" height="150"/>
-        <path d="M110 160H290M110 200H290M110 240H290" stroke-opacity=".55"/>
-        <path d="M200 24V8M190 8H210"/>
-        <path d="M290 250H340V300M60 270H110M340 300H60" stroke-opacity=".6"/>
+    <svg class="bp" viewBox="0 0 460 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#a9d8e8" stroke-width=".6" opacity=".16"/></pattern></defs>
+      <rect class="f" width="460" height="380" fill="url(#grid)" style="--d:0s"/>
+      <g fill="none" stroke="#a9d8e8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path class="d" pathLength="1" style="--d:.2s" d="M110 120Q110 52 200 38Q290 52 290 120"/>
+        <path class="d" pathLength="1" style="--d:.7s" d="M110 120V280H290V120"/>
+        <path class="d" pathLength="1" style="--d:1.1s" d="M110 120H290"/>
+        <path class="d" pathLength="1" style="--d:1.3s" stroke-opacity=".55" d="M110 160H290M110 200H290M110 240H290"/>
+        <path class="d" pathLength="1" style="--d:1.5s" d="M200 38V18M190 18H210"/>
+        <path class="d" pathLength="1" style="--d:1.6s" stroke="#46a8c6" d="M90 280H310V298H90Z"/>
+        <path class="d" pathLength="1" style="--d:1.8s" d="M290 150H340V280"/>
+        <path class="f flow" style="--d:2.8s" stroke="#46a8c6" stroke-width="3" d="M290 150H340V280"/>
+        <g stroke-width="1.3" stroke="#9bd3e6">
+          <path class="d" pathLength="1" style="--d:2.1s" d="M395 38V280M385 38H405M385 280H405"/>
+          <path class="d" pathLength="1" style="--d:2.3s" d="M110 340H290M110 330V350M290 330V350"/>
+          <path class="d" pathLength="1" style="--d:2.5s" d="M24 76H84L124 98"/>
+        </g>
       </g>
-      <rect x="86" y="270" width="228" height="8" fill="#46a8c6"/>
-      <path d="M130 300h140" stroke="#46a8c6" stroke-width="2" stroke-dasharray="6 6"/>
+      <g fill="#d6edf5" font-family="'Open Sans',sans-serif" font-size="14" font-weight="600">
+        <text class="f" style="--d:2.9s" x="24" y="68">API 620 · EN 14620</text>
+        <text class="f" style="--d:2.9s" x="412" y="164">H</text>
+        <text class="f" style="--d:3s" x="192" y="332">Ø</text>
+      </g>
     </svg>
   </div>
 </div>
@@ -174,6 +220,35 @@ footer strong{color:#fff;font-family:'Open Sans',sans-serif;letter-spacing:.06em
       </g>
       <rect x="20" y="250" width="380" height="5" fill="#46a8c6"/>
     </svg>
+  </div>
+</section>
+
+<section class="alt" id="anatomy">
+  <div class="wrap">
+    <p class="eyebrow">Inside our tanks</p>
+    <h2>Anatomy of a storage tank</h2>
+    <p class="lead">Hover over or tap a part of the tank to see what it does.</p>
+    <div class="anat">
+      <svg id="anat-svg" viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Storage tank diagram">
+        <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V6" stroke="#46a8c6" stroke-width="1.6"/></pattern></defs>
+        <path d="M10 316H430" stroke="#00607f" stroke-width="1.5" opacity=".35"/>
+        <g class="part" data-part="bottom" tabindex="0"><rect class="sh" x="50" y="292" width="340" height="24"/><rect class="sh" x="70" y="285" width="280" height="7"/></g>
+        <g class="part" data-part="shell" tabindex="0"><rect class="sh" x="70" y="124" width="280" height="161"/></g>
+        <g class="part" data-part="insulation" tabindex="0"><rect class="sh hat" x="76" y="130" width="18" height="150"/><rect class="sh hat" x="326" y="130" width="18" height="150"/></g>
+        <g class="part" data-part="roof" tabindex="0"><path class="sh" d="M70 124Q70 56 210 38Q350 56 350 124Z"/></g>
+        <g class="part" data-part="nozzles" tabindex="0"><rect class="sh" x="203" y="14" width="14" height="24"/><rect class="sh" x="350" y="164" width="50" height="12"/><rect class="sh" x="394" y="164" width="12" height="128"/></g>
+      </svg>
+      <div class="anat-side">
+        <div class="anat-list">
+          <button type="button" data-part="roof">Roof</button>
+          <button type="button" data-part="shell">Shell</button>
+          <button type="button" data-part="insulation">Insulation</button>
+          <button type="button" data-part="bottom">Bottom and foundation</button>
+          <button type="button" data-part="nozzles">Nozzles and piping</button>
+        </div>
+        <div class="anat-info" aria-live="polite"><h3 id="ai-t"></h3><p id="ai-d"></p></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -262,6 +337,9 @@ footer strong{color:#fff;font-family:'Open Sans',sans-serif;letter-spacing:.06em
     "Safety":"Seguridad",
     "Safe handling of hazardous products guides every decision, from design to installation.":"La manipulación segura de productos peligrosos guía cada decisión, desde el diseño hasta la instalación.",
     "Industry excellence":"Excelencia industrial",
+    "Inside our tanks":"Dentro de nuestros tanques","Anatomy of a storage tank":"Anatomía de un tanque de almacenamiento",
+    "Hover over or tap a part of the tank to see what it does.":"Pasa el cursor o toca una parte del tanque para ver su función.",
+    "Roof":"Techo","Shell":"Envolvente","Insulation":"Aislamiento","Bottom and foundation":"Fondo y cimentación","Nozzles and piping":"Boquillas y tuberías",
     "Design codes we work with":"Códigos de diseño con los que trabajamos",
     "Atmospheric storage tanks":"Tanques de almacenamiento atmosféricos",
     "Low-pressure storage tanks":"Tanques de almacenamiento de baja presión",
@@ -296,10 +374,53 @@ footer strong{color:#fff;font-family:'Open Sans',sans-serif;letter-spacing:.06em
     var m=document.querySelector('meta[name="description"]'); if(m)m.setAttribute('content',META[l].desc);
     btns.forEach(function(b){var on=b.dataset.lang===l;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);});
     try{localStorage.setItem('ts-lang',l);}catch(e){}
+    if(window.__afterLang)window.__afterLang(l);
   }
   btns.forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
   var saved=null; try{saved=localStorage.getItem('ts-lang');}catch(e){}
   if(saved==='es')setLang('es');
+})();
+</script>
+<script>
+(function(){
+  /* interactive tank anatomy */
+  var D={
+    roof:{en:["Roof","Dome or cone roof designed for the internal pressure and vacuum of the tank. Fixed roofs are common on low-pressure and atmospheric tanks."],
+          es:["Techo","Techo en cúpula o cónico diseñado para la presión interna y el vacío del tanque. Los techos fijos son habituales en tanques de baja presión y atmosféricos."]},
+    shell:{en:["Shell","Welded steel courses with thickness calculated for the product load, wind and seismic effects, following the applicable code (API 620, API 650, EN 14620, EN 14015)."],
+           es:["Envolvente","Virolas de acero soldadas con espesor calculado para la carga del producto, el viento y el sismo, según el código aplicable (API 620, API 650, EN 14620, EN 14015)."]},
+    insulation:{en:["Insulation","In cold-service tanks, insulation limits heat ingress and product boil-off. The design depends on the product and its operating temperature."],
+                es:["Aislamiento","En tanques de servicio en frío, el aislamiento limita la entrada de calor y la evaporación del producto. El diseño depende del producto y de su temperatura de operación."]},
+    bottom:{en:["Bottom and foundation","Flat bottom plates rest on a foundation designed to carry the weight of the tank and its contents."],
+            es:["Fondo y cimentación","Las chapas del fondo plano se apoyan sobre una cimentación diseñada para soportar el peso del tanque y de su contenido."]},
+    nozzles:{en:["Nozzles and piping","Connections for filling, withdrawal, venting and instrumentation, sized and located according to the process requirements."],
+             es:["Boquillas y tuberías","Conexiones para llenado, extracción, venteo e instrumentación, dimensionadas y ubicadas según los requisitos del proceso."]}
+  };
+  var cur='shell', t=document.getElementById('ai-t'), d=document.getElementById('ai-d');
+  function render(){
+    var l=document.documentElement.lang==='es'?'es':'en';
+    t.textContent=D[cur][l][0]; d.textContent=D[cur][l][1];
+    document.querySelectorAll('[data-part]').forEach(function(el){el.classList.toggle('on',el.dataset.part===cur);});
+  }
+  function pick(k){cur=k;render();}
+  document.querySelectorAll('[data-part]').forEach(function(el){
+    var k=el.dataset.part;
+    el.addEventListener('click',function(){pick(k);});
+    el.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')pick(k);});
+    el.addEventListener('focus',function(){pick(k);});
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(k);}});
+  });
+  window.__afterLang=render; render();
+
+  /* scroll reveal */
+  var els=document.querySelectorAll('.tile,.two > *,.pillar,.codes div,.contact > *,.wrap > .eyebrow,.wrap > h2,.who .wrap > p,.anat > *');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){
+    var sib=Array.prototype.filter.call(e.parentNode.children,function(c){return c.matches('.tile,.pillar,div,.anat > *');});
+    var i=Math.max(0,sib.indexOf(e)); e.style.setProperty('--rd',Math.min(i*0.09,0.36)+'s');
+    e.classList.add('rv'); io.observe(e);
+  });
 })();
 </script>
 </body>
