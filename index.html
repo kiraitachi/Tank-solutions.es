@@ -6,40 +6,43 @@
 <title>Tanks Solutions | Gas storage tank engineering</title>
 <meta name="description" content="Design and construction of low-pressure and atmospheric gas storage tanks according to API 620, API 650, EN 14620 and EN 14015.">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#003366;--ink:#0f1923;--green:#82b904;--bg:#f5f7f8;--muted:#43474f;--line:#d9dde3}
+:root{--navy:#00607f;--ink:#1c2b33;--green:#46a8c6;--bg:#ebf6fa;--muted:#757575;--line:#cfe3ec}
 *{box-sizing:border-box;margin:0}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-h1,h2,h3,h4,.nav a{font-family:Manrope,system-ui,sans-serif}
+body{font-family:'Open Sans',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+h1,h2,h3,h4,.nav a{font-family:'Open Sans',system-ui,sans-serif}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 /* header */
-header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:76px}
+header{position:sticky;top:0;z-index:20;background:var(--bg);box-shadow:0 2px 6px rgba(0,58,77,.12)}
+.topbar{background:var(--navy);color:#fff;height:31px}
+.topbar .wrap{display:flex;justify-content:flex-end;align-items:center;height:100%}
+.bar{display:flex;align-items:center;justify-content:space-between;height:80px}
 .logo svg{height:44px;width:auto;display:block}
-.nav{display:flex;gap:28px;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
+.nav{display:flex;gap:32px;font-weight:700;font-size:15px;color:var(--navy)}
 .nav a:hover{color:var(--green)}
-.lang{font-size:13px;font-weight:700;color:var(--line);display:flex;gap:8px;align-items:center}
-.lang button{font:inherit;background:none;border:0;padding:4px 2px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent}
-.lang button:hover{color:var(--navy)}
-.lang button.on{color:var(--navy);border-bottom-color:var(--green)}
+.lang{font-size:13px;font-weight:600;color:#fff;display:flex;gap:8px;align-items:center}
+.lang button{font:inherit;background:none;border:0;padding:4px 2px;cursor:pointer;color:#cfe3ec;border-bottom:2px solid transparent}
+.lang button:hover{color:#fff}
+.lang button.on{color:#fff;border-bottom-color:var(--green)}
 @media(max-width:900px){.nav{display:none}}
 /* hero */
-.hero{position:relative;background:linear-gradient(120deg,#001b3c 0%,#003366 60%,#0a4a8a 100%);color:#fff;overflow:hidden}
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:520px;padding-top:60px;padding-bottom:60px}
-.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.05;font-weight:800;letter-spacing:-.02em}
-.hero p{margin:22px 0 32px;font-size:18px;max-width:540px;color:#d5e3ff}
-.btn{display:inline-block;background:var(--green);color:#0f1923;font-family:Manrope;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:15px 30px;border-radius:2px;transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:#fff;border:2px solid #fff;margin-left:12px}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.05;font-weight:600;letter-spacing:-.01em}
+.hero p{margin:22px 0 32px;font-size:18px;max-width:540px;color:#d6edf5}
+.btn{display:inline-block;background:#fff;color:var(--navy);border:2px solid var(--green);font-family:'Open Sans',sans-serif;font-weight:600;font-size:15px;text-transform:uppercase;padding:12px 30px;transition:background .15s,color .15s}
+.btn:hover{background:var(--green);color:#fff}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff;margin-left:12px}
+.btn.ghost:hover{background:#fff;color:var(--navy)}
 .hero svg{width:100%;height:auto;opacity:.95}
 @media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero svg{max-width:420px;margin:auto}}
 /* solutions strip */
 .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:-56px;position:relative;z-index:5}
-.tile{background:#fff;border:1px solid var(--line);padding:32px 26px;box-shadow:0 10px 30px rgba(0,27,60,.08);transition:background .2s}
+.tile{background:#fff;border:1px solid var(--line);padding:32px 26px;box-shadow:0 10px 30px rgba(0,58,77,.10);transition:background .2s}
 .tile:hover{background:var(--navy);color:#fff}
-.tile:hover p,.tile:hover .code{color:#d5e3ff}
+.tile:hover p,.tile:hover .code{color:#d6edf5}
 .tile svg{width:54px;height:54px;margin-bottom:18px}
 .tile h3{font-size:16px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
 .tile p{font-size:14px;color:var(--muted)}
@@ -49,22 +52,26 @@ header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid 
 /* sections */
 section{padding:88px 0}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
-h2{font-size:clamp(28px,3.6vw,42px);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--navy);margin-bottom:20px}
+h2{font-size:clamp(28px,3.6vw,42px);line-height:1.15;font-weight:600;letter-spacing:-.02em;color:var(--navy);margin-bottom:20px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .two p{color:var(--muted);margin-bottom:16px}
 @media(max-width:900px){.two{grid-template-columns:1fr}}
 .alt{background:var(--bg)}
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
-.pillar{border-top:3px solid var(--green);padding-top:20px}
-.pillar h4{font-size:19px;color:var(--navy);margin-bottom:8px}
-.pillar p{font-size:15px;color:var(--muted)}
+.who{text-align:center}
+.who .eyebrow{color:#9bd3e6}
+.who .pillars{text-align:left;margin-top:56px}
+.who .wrap::after{content:'';display:block;height:1px;background:var(--green);margin-top:64px}
+.pillar svg{width:56px;height:56px;margin-bottom:18px;display:block}
+.pillar h4{font-size:20px;font-weight:700;color:#fff;margin-bottom:8px}
+.pillar p{font-size:15px;color:#fff}
 @media(max-width:800px){.pillars{grid-template-columns:1fr}}
 /* codes */
 .dark{background:var(--navy);color:#fff}
 .dark h2{color:#fff}
 .codes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-.codes div{border:1px solid rgba(255,255,255,.25);padding:20px 22px;font-family:Manrope;font-weight:700}
-.codes small{display:block;font-family:Inter;font-weight:400;font-size:13px;color:#a7c8ff;margin-top:4px}
+.codes div{background:#fff;border-top:3px solid var(--green);padding:20px 22px;font-weight:700;color:var(--navy)}
+.codes small{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:4px}
 @media(max-width:800px){.codes{grid-template-columns:1fr 1fr}}
 /* contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:56px}
@@ -73,25 +80,28 @@ h2{font-size:clamp(28px,3.6vw,42px);line-height:1.1;font-weight:800;letter-spaci
 .cta{background:var(--bg);padding:44px;border-left:4px solid var(--green)}
 .cta p{color:var(--muted);margin:10px 0 24px}
 @media(max-width:800px){.contact{grid-template-columns:1fr}}
-footer{background:#001b3c;color:#a7c8ff;padding:48px 0 28px;font-size:14px}
+footer{background:#003a4d;color:#a9d8e8;padding:48px 0 28px;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-footer strong{color:#fff;font-family:Manrope;letter-spacing:.06em}
+footer strong{color:#fff;font-family:'Open Sans',sans-serif;letter-spacing:.06em}
 </style>
 </head>
 <body>
 
 <header>
+  <div class="topbar"><div class="wrap"><div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="on" aria-pressed="true">EN</button><span>|</span><button type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div></div></div>
   <div class="wrap bar">
     <a class="logo" href="#top" aria-label="Tanks Solutions">
       <svg viewBox="0 0 330 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tanks Solutions">
-        <rect width="64" height="64" rx="12" fill="#003366"/>
+        <rect width="64" height="64" rx="12" fill="#00607f"/>
         <rect x="30" y="9" width="4" height="6" rx="1" fill="#fff"/>
         <path d="M18 28 Q18 17 32 15 Q46 17 46 28 Z" fill="#fff"/>
         <rect x="18" y="28" width="28" height="20" fill="#fff"/>
-        <path d="M18 35H46M18 42H46" stroke="#003366" stroke-width="1.6" fill="none"/>
-        <rect x="14" y="48" width="36" height="4" rx="1" fill="#82b904"/>
-        <text x="80" y="31" font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="25" letter-spacing="1.5" fill="#003366">TANKS</text>
-        <text x="80" y="53" font-family="Manrope,Arial,sans-serif" font-weight="600" font-size="17" letter-spacing="6.2" fill="#82b904">SOLUTIONS</text>
+        <path d="M18 35H46M18 42H46" stroke="#00607f" stroke-width="1.6" fill="none"/>
+        <rect x="14" y="48" width="36" height="4" rx="1" fill="#46a8c6"/>
+        <text x="80" y="31" font-family="'Open Sans',Arial,sans-serif" font-weight="800" font-size="25" letter-spacing="1.5" fill="#00607f">TANKS</text>
+        <text x="80" y="53" font-family="'Open Sans',Arial,sans-serif" font-weight="600" font-size="17" letter-spacing="6.2" fill="#46a8c6">SOLUTIONS</text>
       </svg>
     </a>
     <nav class="nav">
@@ -100,9 +110,6 @@ footer strong{color:#fff;font-family:Manrope;letter-spacing:.06em}
       <a href="#codes">Design codes</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="en" class="on" aria-pressed="true">EN</button><span>|</span><button type="button" data-lang="es" aria-pressed="false">ES</button>
-    </div>
   </div>
 </header>
 
@@ -110,40 +117,40 @@ footer strong{color:#fff;font-family:Manrope;letter-spacing:.06em}
 <div class="hero">
   <div class="wrap">
     <div>
-      <p style="margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#bef458">Gas storage tank engineering</p>
+      <p style="margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#9bd3e6">Gas storage tank engineering</p>
       <h1>Storage tank engineering tailored to every project</h1>
       <p>From design to construction, we deliver low-pressure and atmospheric storage tanks built to the most demanding international codes.</p>
       <a class="btn" href="#contact">Get in touch</a><a class="btn ghost" href="#what">Our solutions</a>
     </div>
     <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g fill="none" stroke="#a7c8ff" stroke-width="2.5">
+      <g fill="none" stroke="#a9d8e8" stroke-width="2.5">
         <path d="M110 120 Q110 40 200 24 Q290 40 290 120"/>
         <rect x="110" y="120" width="180" height="150"/>
         <path d="M110 160H290M110 200H290M110 240H290" stroke-opacity=".55"/>
         <path d="M200 24V8M190 8H210"/>
         <path d="M290 250H340V300M60 270H110M340 300H60" stroke-opacity=".6"/>
       </g>
-      <rect x="86" y="270" width="228" height="8" fill="#82b904"/>
-      <path d="M130 300h140" stroke="#82b904" stroke-width="2" stroke-dasharray="6 6"/>
+      <rect x="86" y="270" width="228" height="8" fill="#46a8c6"/>
+      <path d="M130 300h140" stroke="#46a8c6" stroke-width="2" stroke-dasharray="6 6"/>
     </svg>
   </div>
 </div>
 
 <div class="wrap tiles" id="what">
   <a class="tile" href="#about">
-    <svg viewBox="0 0 54 54" fill="none" stroke="#82b904" stroke-width="2.5"><path d="M11 22Q11 9 27 7Q43 9 43 22"/><rect x="11" y="22" width="32" height="24"/><path d="M11 30H43M11 38H43" opacity=".5"/></svg>
+    <svg viewBox="0 0 54 54" fill="none" stroke="#46a8c6" stroke-width="2.5"><path d="M11 22Q11 9 27 7Q43 9 43 22"/><rect x="11" y="22" width="32" height="24"/><path d="M11 30H43M11 38H43" opacity=".5"/></svg>
     <h3>Low-pressure storage</h3><p>Flat-bottom tanks for liquefied gases and cryogenic service.</p><span class="code">API 620 · EN 14620</span>
   </a>
   <a class="tile" href="#about">
-    <svg viewBox="0 0 54 54" fill="none" stroke="#82b904" stroke-width="2.5"><rect x="9" y="14" width="36" height="32"/><path d="M9 14L27 6L45 14M9 24H45M9 35H45" opacity=".6"/></svg>
+    <svg viewBox="0 0 54 54" fill="none" stroke="#46a8c6" stroke-width="2.5"><rect x="9" y="14" width="36" height="32"/><path d="M9 14L27 6L45 14M9 24H45M9 35H45" opacity=".6"/></svg>
     <h3>Atmospheric storage</h3><p>Vertical cylindrical welded tanks for large-volume storage.</p><span class="code">API 650 · EN 14015</span>
   </a>
   <a class="tile" href="#about">
-    <svg viewBox="0 0 54 54" fill="none" stroke="#82b904" stroke-width="2.5"><rect x="6" y="17" width="42" height="20" rx="10"/><path d="M15 37v9M39 37v9M27 17v-7"/></svg>
+    <svg viewBox="0 0 54 54" fill="none" stroke="#46a8c6" stroke-width="2.5"><rect x="6" y="17" width="42" height="20" rx="10"/><path d="M15 37v9M39 37v9M27 17v-7"/></svg>
     <h3>Pressure vessels</h3><p>Pressure equipment designed to recognised European and US codes.</p><span class="code">ASME VIII · EN 13445 · PD 5500</span>
   </a>
   <a class="tile" href="#about">
-    <svg viewBox="0 0 54 54" fill="none" stroke="#82b904" stroke-width="2.5"><path d="M8 44V10M8 44H46"/><path d="M14 36L24 24L32 30L46 12" /></svg>
+    <svg viewBox="0 0 54 54" fill="none" stroke="#46a8c6" stroke-width="2.5"><path d="M8 44V10M8 44H46"/><path d="M14 36L24 24L32 30L46 12" /></svg>
     <h3>Engineering</h3><p>Calculation, design and technical support for gas infrastructure projects.</p><span class="code">AD-Merkblätter</span>
   </a>
 </div>
@@ -158,32 +165,32 @@ footer strong{color:#fff;font-family:Manrope;letter-spacing:.06em}
       <a class="btn" href="#contact">Talk to our team</a>
     </div>
     <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:auto;background:var(--bg)">
-      <g fill="none" stroke="#003366" stroke-width="2.5">
+      <g fill="none" stroke="#00607f" stroke-width="2.5">
         <path d="M60 140Q60 80 120 70Q180 80 180 140"/><rect x="60" y="140" width="120" height="100"/>
         <circle cx="300" cy="150" r="70"/><path d="M230 150Q300 180 370 150" opacity=".5"/>
         <path d="M300 220v20M270 215l-10 25M330 215l10 25M20 250H400"/>
       </g>
-      <rect x="20" y="250" width="380" height="5" fill="#82b904"/>
+      <rect x="20" y="250" width="380" height="5" fill="#46a8c6"/>
     </svg>
   </div>
 </section>
 
-<section class="alt">
+<section class="dark who">
   <div class="wrap">
     <p class="eyebrow">Who we are</p>
     <h2>Experts in tank construction</h2>
-    <p style="color:var(--muted);max-width:720px">Leading experts in API 650 and API 620 tank construction, delivering projects from first calculation to final commissioning.</p>
+    <p style="color:#fff;max-width:720px;margin:0 auto">Leading experts in API 650 and API 620 tank construction, delivering projects from first calculation to final commissioning.</p>
     <div class="pillars">
-      <div class="pillar"><h4>Engineering</h4><p>Design and calculation of storage tanks and pressure equipment according to the applicable code.</p></div>
-      <div class="pillar"><h4>Construction</h4><p>Fabrication and erection with a focus on quality, deadlines and efficient execution.</p></div>
-      <div class="pillar"><h4>Safety</h4><p>Safe handling of hazardous products guides every decision, from design to installation.</p></div>
+      <div class="pillar"><svg viewBox="0 0 56 56" fill="none" stroke="#46a8c6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 6L12 50M28 6L44 50M20 34H36M28 6V2M24 50H32"/><circle cx="28" cy="14" r="3"/></svg><h4>Engineering</h4><p>Design and calculation of storage tanks and pressure equipment according to the applicable code.</p></div>
+      <div class="pillar"><svg viewBox="0 0 56 56" fill="none" stroke="#46a8c6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 24Q10 12 28 8Q46 12 46 24"/><rect x="10" y="24" width="36" height="24"/><path d="M10 32H46M10 40H46M4 48H52"/></svg><h4>Construction</h4><p>Fabrication and erection with a focus on quality, deadlines and efficient execution.</p></div>
+      <div class="pillar"><svg viewBox="0 0 56 56" fill="none" stroke="#46a8c6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 5L47 12V27C47 39 39 47 28 51C17 47 9 39 9 27V12Z"/><path d="M19 28L26 35L38 21"/></svg><h4>Safety</h4><p>Safe handling of hazardous products guides every decision, from design to installation.</p></div>
     </div>
   </div>
 </section>
 
-<section class="dark" id="codes">
+<section class="alt" id="codes">
   <div class="wrap">
-    <p class="eyebrow" style="color:#bef458">Industry excellence</p>
+    <p class="eyebrow">Industry excellence</p>
     <h2>Design codes we work with</h2>
     <div class="codes">
       <div>API 650 / EN 14015<small>Atmospheric storage tanks</small></div>
